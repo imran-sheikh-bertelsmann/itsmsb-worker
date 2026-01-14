@@ -13,11 +13,11 @@ git clone --branch "$BRANCH" "$AUTHED_REPO_URL" /app/code
 
 cd /app/code
 
-# pip install branch-specific requirements if any
-if [ -f "requirements.txt" ]; then
-    echo "Installing branch-specific dependencies..."
-    pip install --no-cache-dir -r requirements.txt
-fi
+# # pip install branch-specific requirements if any
+# if [ -f "requirements.txt" ]; then
+#     echo "Installing branch-specific dependencies..."
+#     pip install --no-cache-dir -r requirements.txt
+# fi
 
 # Run itsmsb application
 python "$PATH_TO_MAIN"
