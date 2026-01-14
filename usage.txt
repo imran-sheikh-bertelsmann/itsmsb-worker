@@ -1,0 +1,9 @@
+docker build -t generic-python-app .
+
+docker run \
+  -e BRANCH=feature1 \
+  -e PATH_TO_MAIN=app.py \
+  -e REPO_URL=https://gitlab.com/username/repo.git \
+  -e GITLAB_USERNAME=<your-username> \
+  -e GITLAB_PASSWORD=<your-password> \
+  generic-python-app
