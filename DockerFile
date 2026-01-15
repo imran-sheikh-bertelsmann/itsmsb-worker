@@ -14,9 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-# env variables
-ENV GITHUB_REPO_URL=https://github.com/imran-sheikh-bertelsmann/demo-python-project.git
-ENV GITHUB_USERNAME=imran-sheikh-bertelsmann
-ENV GITHUB_TOKEN=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
-
 ENTRYPOINT ["/entrypoint.sh"]
