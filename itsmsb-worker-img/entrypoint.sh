@@ -1,9 +1,8 @@
 #!/bin/bash
 set -e
 
-BASE_DIR="/app/code"
+BASE_DIR="/itsmsb-code-repo"
 
-# these env will come from k8s configmap
 BRANCH="${BRANCH:?BRANCH not set}"
 
 case "$BRANCH" in
@@ -19,9 +18,7 @@ PATH_TO_MAIN="${PATH_TO_MAIN:?PATH_TO_MAIN not set}"
 
 MAIN_FILE="$BASE_DIR/$BRANCH/$PATH_TO_MAIN"
 
-echo "Selected branch: $BRANCH"
-echo "Selected path to main: $PATH_TO_MAIN"
-echo "Selected entry file: $MAIN_FILE"
+echo "Running: $MAIN_FILE"
 
 if [ ! -f "$MAIN_FILE" ]; then
   echo "ERROR: File not found!"
