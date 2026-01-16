@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shei048-itsmsb-worker-configmap
+data:
+  BRANCH: feature-alice
+  PATH_TO_MAIN: services/payments/app.py

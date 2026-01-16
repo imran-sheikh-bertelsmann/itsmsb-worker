@@ -5,7 +5,6 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 RUN apt-get update && \
-    apt-get install -y git && \
     pip install --no-cache-dir pip-tools && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shei048-itsmsb-worker-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shei048-itsmsb-worker-dep
+  template:
+    metadata:
+      labels:
+        app: shei048-itsmsb-worker-dep
+    spec:
+      containers:
+      - name: shei048-itsmsb-worker-container
+        image: registry.example.com/itsmsb-worker-image:1.0.0   # TODO: Change to azure registry.
+        
+        envFrom:
+          - configMapRef:
+              name: shei048-itsmsb-worker-configmap
+
+        volumeMounts:
+          - name: code-volume
+            mountPath: /app/code  # TODO: Change according to cornjob.
+            
+      volumes:
+        - name: code-volume
+          persistentVolumeClaim:
+            claimName: code-pvc   # TODO: Change according to cornjob.
