@@ -5,15 +5,6 @@ BASE_DIR="/itsmsb-code-repo"
 
 BRANCH="${BRANCH:?BRANCH not set}"
 
-case "$BRANCH" in
-  main|develop|feature-*)
-    ;;
-  *)
-    echo "Invalid branch name"
-    exit 1
-    ;;
-esac
-
 PATH_TO_MAIN="${PATH_TO_MAIN:?PATH_TO_MAIN not set}"
 
 MAIN_FILE="$BASE_DIR/$BRANCH/$PATH_TO_MAIN"
