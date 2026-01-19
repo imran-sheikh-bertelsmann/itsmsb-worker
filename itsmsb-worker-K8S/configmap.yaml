@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: itsmsb-worker-configmap
-  namespace: itsm-apps
-data:
-  path_to_main: services/payments/app.py    # TODO: update it to actual main file path.
