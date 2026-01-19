@@ -4,8 +4,10 @@ set -e
 BASE_DIR="/itsmsb-code-repo"
 
 BRANCH="${BRANCH:?BRANCH not set}"
+echo "Selected branch: $BRANCH"
 
 PATH_TO_MAIN="${PATH_TO_MAIN:?PATH_TO_MAIN not set}"
+echo "Path to main file: $PATH_TO_MAIN"
 
 MAIN_FILE="$BASE_DIR/$BRANCH/$PATH_TO_MAIN"
 
