@@ -3,13 +3,13 @@ set -e
 
 BASE_DIR="/itsmsb-code-repo"
 
-BRANCH="${BRANCH:?BRANCH not set}"
-echo "Selected branch: $BRANCH"
+BRANCH="${branch:?branch not set}"
+echo "Selected branch: $branch"
 
-PATH_TO_MAIN="${PATH_TO_MAIN:?PATH_TO_MAIN not set}"
-echo "Selected path to main file: $PATH_TO_MAIN"
+PATH_TO_MAIN="${path_to_main:?path_to_main not set}"
+echo "Selected path to main file: $path_to_main"
 
-MAIN_FILE="$BASE_DIR/$BRANCH/$PATH_TO_MAIN"
+MAIN_FILE="$BASE_DIR/$branch/$path_to_main"
 echo "Main file location: $MAIN_FILE"
 
 if [ ! -f "$MAIN_FILE" ]; then
