@@ -4,5 +4,4 @@ metadata:
   name: itsmsb-worker-configmap
   namespace: itsm-apps
 data:
-  BRANCH: feature-a                         # TODO: update it to actual main file path.
-  PATH_TO_MAIN: services/payments/app.py    # TODO: update it to actual main file path.
+  path_to_main: services/payments/app.py    # TODO: update it to actual main file path.
